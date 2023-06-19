@@ -1,7 +1,7 @@
 import React from 'react'
 import './Dropdown.css';
 
-function Dropdown({ name }) {
+function Dropdown({ name }: {name:String}) {
   return (
     <div className="dropdown">
       <button className="dropbtn">{name}</button>
