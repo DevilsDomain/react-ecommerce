@@ -14,7 +14,7 @@ export default function Home() {
           <Link className="mb-2" href="/category/electronics">electronics</Link>
         </div>
         <div className="h-96 w-64 bg-orange-400 rounded-2xl flex items-end justify-center">
-          <Link className="mb-2" href="/category/jewelry">jewelry</Link>
+          <Link className="mb-2" href="/category/jewelery">jewelery</Link>
         </div>
         <div className="h-96 w-64 bg-cyan-400 rounded-2xl flex items-end justify-center">
           <Link className="mb-2" href="/category/men's%20clothing">{`men's clothing`}</Link>
