@@ -18,11 +18,13 @@ function page({ params: { category }}: CategoryParams) {
   if (error) return <div>failed to load</div>
   if (isLoading) return <div>loading...</div>
   return (
-    <div>
-      <h1>Category: {category}</h1>
-      {data.map((item, itemIndex) => (
-        <ProductCard key={itemIndex} data={item} />
-      ))}
+    <div className='flex flex-col justify-center items-center gap-x-8'>
+      <h1 className='text-5xl mt-10 mb-20'>Browse Items in {category}</h1>
+      <div className='flex flex-row flex-wrap  gap-x-8 w-4/5'>
+        {data.map((item, itemIndex) => (
+          <ProductCard key={itemIndex} data={item} />
+        ))}
+      </div>
     </div>
   );
 }
