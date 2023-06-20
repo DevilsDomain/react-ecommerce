@@ -8,7 +8,7 @@ import Dropdown from './Dropdown/Dropdown'
 
 function Navbar() {
   return (
-    <div className='flex flex-row justify-center pt-10'>
+    <div className='flex flex-row justify-center pt-5'>
         {/* left side start */}
         <div className='flex flex-row items-center gap-x-10 pr-96'>
             <Image src={shop} width={45} height={45} alt='shop icon'/>
