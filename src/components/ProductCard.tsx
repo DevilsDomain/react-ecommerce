@@ -1,7 +1,21 @@
 import React from 'react'
 import Image from 'next/image'
 
-function ProductCard({data}: {data:String}) {
+interface ProductData {
+    image: string;
+    title: string;
+    price: number;
+    rating: {
+      rate: number;
+    };
+  }
+  
+  interface ProductCardProps {
+    data: ProductData;
+  }
+  
+
+function ProductCard({data}: ProductCardProps) {
   return (
     <div className="h-96 w-64 border-2 border-amber-700 rounded-2xl flex items-end justify-center mb-9 text-sm">
         <div>

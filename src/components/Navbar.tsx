@@ -9,6 +9,8 @@ import Dropdown from './Dropdown/Dropdown'
 import Link from 'next/link'
 import useSWR from 'swr'
 
+
+
 function Navbar() {
     const fetcher = async (...args: Parameters<typeof fetch>) => {
         const response = await fetch(...args);
