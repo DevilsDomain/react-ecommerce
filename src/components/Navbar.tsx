@@ -10,12 +10,15 @@ import Link from 'next/link'
 import useSWR from 'swr'
 
 function Navbar() {
-  const fetcher = (...args) => fetch(...args).then(res => res.json())
+    const fetcher = async (...args: Parameters<typeof fetch>) => {
+        const response = await fetch(...args);
+        return response.json();
+      };  
   const { data, error, isLoading } = useSWR('https://fakestoreapi.com/products/categories', fetcher)
- 
   if (error) return <div>failed to load</div>
   if (isLoading) return <div>loading...</div>
 
+  
   return (
     <div className='flex flex-row justify-center pt-5'>
         {/* left side start */}
