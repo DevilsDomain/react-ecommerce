@@ -1,9 +1,15 @@
 'use client';
+import ProductCard from '@/components/ProductCard';
 import React, { useState } from 'react';
 
 type CartItem = {
+    image: string;
     title: string;
     price: number;
+    id: Number
+    rating: {
+      rate: number;
+    };
   };
   
 
@@ -32,11 +38,10 @@ function CartPage() {
       <h1>Cart Page</h1>
       {cartItems.map((item, index) => (
         <div key={index}>
-          {/* Render the cart item details */}
-          <p>{item.title}</p>
-          <p>${item.price}</p>
-          {/* Add more fields as needed */}
-          <button onClick={() => handleRemoveItem(index)}>Remove</button>
+          <div className='flex flex-row'>
+            <ProductCard data={item} />
+            <button className='bg-red-500 w-32 h-14 rounded-full self-center' onClick={() => handleRemoveItem(index)}>Remove</button>
+          </div>
         </div>
       ))}
     </div>
