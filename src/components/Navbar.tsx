@@ -31,7 +31,7 @@ function Navbar() {
             <Dropdown name="Categories" categories={data}/>
             <div className='flex flex-row'>
                 <Image src={cart} width={25} height={25} alt='shopping cart' />
-                <p className='pl-1'>Cart</p>
+                <Link href={'/cart'} className='pl-1'>Cart</Link>
             </div>
         </div>
         {/* left side end */}
